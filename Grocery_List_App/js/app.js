@@ -1,5 +1,15 @@
-var app = angular.module('myApp', ["xeditable"]);
+/*var express = require('express');
+var app = express();
 
+app.get('/', function(req, res) {
+    res.send('hello world');
+});
+
+app.listen(3306);*/
+
+
+
+var app = angular.module('myApp', []);
 
 app.controller('GroceryController', function($scope){
 
@@ -8,9 +18,9 @@ app.controller('GroceryController', function($scope){
     $scope.groceries=['butter', 'cheese','yogurt'];
 
     $scope.addItem= function () {
-      if($scope.groceries.indexOf($scope.newItem.toLowerCase()) === -1) {
-          $scope.groceries.push($scope.newItem.toLowerCase());
-          $scope.newItem= '';
+        if($scope.groceries.indexOf($scope.newItem.toLowerCase()) === -1) {
+            $scope.groceries.push($scope.newItem.toLowerCase());
+            $scope.newItem= '';
         }
     };
 
@@ -18,15 +28,7 @@ app.controller('GroceryController', function($scope){
     $scope.removeItem= function(item){
         var idx= $scope.groceries.indexOf(item);
         if(idx!==-1)
-        $scope.groceries.splice(idx,1);
+            $scope.groceries.splice(idx,1);
     }
-
-});
-
-app.run(function(editableOptions) {
-    editableOptions.theme = 'bs3';
-});
-
-app.controller('TextBtnCtrl', function($scope) {
 
 });
