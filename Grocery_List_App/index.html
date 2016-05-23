@@ -13,6 +13,9 @@
     <script src="js/connect.js"></script>
     <script src="js/jquery-1.12.4.min.js"></script>
     <script src="js/npm.js"></script>
+    <script src="js/routes.js"></script>
+    <script src="js/passport.js"></script>
+    <script src="js/auth.js"></script>
     <script src="jquery/jquery-ui.min.js"></script>
     <script src="js/bootstrap-editable.min.js"></script>
     <!-- Links -->
@@ -29,41 +32,6 @@
     <link rel="shortcut icon" type="image/png" href="img/check.png"/>
 </head>
     <body class="clearfix">
-        <!--<main ng-controller="GroceryController">
-            <h1>Shared Groceries <img src="img/check.png" height="40" width="40"></h1>
-            <section>
-                <button class="ui-state-default" onclick="window.location.href='index.html'">Home</button>
-                <button class="ui-state-default" onclick="window.location.href='login.html'">Login</button>
-                <button class="ui-state-default" onclick="window.location.href='signup.html'">Signup</button>
-            </section>
-            <div id="fix">
-                <form ng-submit="addItem()">
-                    <div>
-                        <input type="text" ng-model="newItem" placeholder="Add Grocery Item"/>
-                        <button id="submit" type="submit">Save</button>
-                    </div>
-                </form>
-            </div>
-            <div id="bottom">
-                <h4>Grocery List</h4>
-                <table id="sortable">
-
-                    <tr ng-repeat="gro in groceries"  >
-                        {{ groceries || 'empty' }}
-                        <td>{{gro}}</td>
-                        <td >
-                            <button ng-click="removeItem(gro)">Delete</button>
-                            <div >
-                                <button class="btn btn-default">
-                                    Edit
-                                </button>
-                            </div>
-                        </td>
-                    </tr>
-                </table>
-            </div>
-        </main>-->
-
         <main ng-controller="GroceryController">
             <h1>Shared Groceries <img src="img/check.png" height="40" width="40"></h1>
             <section>
@@ -82,10 +50,10 @@
             <p>{{ newItem }}</p>
             <div>
                 <h4>Grocery Items {{ groceries.length }}</h4>
-                <table>
-                    <tr ng-repeat="gro in groceries">
-                        <td>{{gro}}</td>
-                        <td>
+                <table id="sortable" >
+                    <tr id="sortable" ng-repeat="gro in groceries">
+                        <td class="ui-state-default">{{gro}}</td>
+                        <td class="ui-state-default">
                             <button ng-click="removeItem(gro)">&times;</button>
                         </td>
                     </tr>
@@ -100,5 +68,11 @@
                 &copy;2016 Shared Groceries
             </small>
         </footer>
+        <script>
+            $(function() {
+                $( "#sortable" ).sortable();
+                $( "#sortable" ).disableSelection();
+            });
+        </script>
     </body>
 </html>
