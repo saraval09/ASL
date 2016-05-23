@@ -32,7 +32,7 @@ var connection = mysql.createConnection({
     user: 'root',
     password: 'root',
     database: 'groceries'
-})
+});
 
 connection.connect(function(err) {
     if (err) throw err
