@@ -1,0 +1,210 @@
+/************ Main Page ************/
+.clearfix:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0; height: 0;
+}
+
+body{
+    background-image: url("../img/bg.png");
+
+    font-family: 'Slabo 27px', serif;
+
+}
+
+main{
+    text-align: center;
+    margin: 0 auto;
+    width: 680px;
+    background-color: rgba(255, 255, 255,.2);
+
+}
+
+/************ Header ************/
+
+
+h1{
+    font-size: 3em;
+    color: #D49768;
+    padding-bottom: 10px;
+
+}
+
+section{
+    float: right;
+    margin: 0 50px;
+
+}
+
+#fix{
+    clear: both;
+
+}
+.checkbox{
+
+    margin: 0 150px;
+
+
+}
+
+
+/************ Input Field ************/
+
+label{
+
+}
+input{
+
+    width: 30%;
+    height: 35px;
+    background-color: #353a3d;
+    color: #cdf1ff;
+    box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    margin: 5%;
+    border-radius: 5px;
+    text-align: center;
+
+
+}
+
+::-webkit-input-placeholder {
+    color: #ffffff;
+    text-transform:uppercase ;
+    letter-spacing: 1px;
+    font-family: 'Poiret One', cursive;
+}
+
+
+/************ Save Button ************/
+
+
+#submit{
+    background-color: #353a3d;
+    color: #9FDA58;
+    border-radius: 5px;
+    width: 10%;
+    height: 35px;
+    margin: 5%;
+    text-transform:uppercase ;
+    font-family: 'Poiret One', cursive;
+}
+
+#submit:hover{
+    background-color: #850e00;
+    color: #ffffff;
+}
+
+#submit:active{
+    background-color: #ffffff;
+    color: #000;
+}
+#submit:focus{
+    background-color: #f7ff00;
+    color: #000000;
+}
+
+
+/************ Table Header ************/
+#trow{
+    font-size: 1em;
+    font-family: "Arial Narrow Regular", Georgia, sans-serif;
+    background-color: #d49768;
+    color: #454445;
+    border-radius: 5px;
+
+}
+
+h4 {
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    text-align: center;
+    width: 100%;
+    color: #ffffff;
+    font-size: 1.5em;
+    text-transform:uppercase ;
+
+}
+
+p{
+    color: #D49768;
+    text-align: center;
+    text-transform:uppercase ;
+    letter-spacing: 3px;
+}
+
+
+/************ Table ************/
+h4{
+    color: #D49768;
+}
+
+table{
+    color: #D49768;
+    text-align: center;
+    width: 500px;
+    background-color: rgba(197, 195, 198, 0.43);
+    margin: 0 auto;
+    border-radius: 5px;
+    box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.3);
+    font-weight: bold;
+    text-transform:uppercase ;
+    letter-spacing: 3px;
+}
+
+td{
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.3);
+}
+
+
+
+.form-control{
+    margin: 0 auto;
+}
+
+/************ Buttons ************/
+
+button{
+    background-color: #850e00;
+    color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.3);
+
+
+}
+
+button:hover{
+    background-color: #000ed0;
+    color: #ffffff;
+    font-weight: bold;
+
+}
+
+button:active{
+    background-color: #ffffff;
+    color: #000;
+}
+
+button:focus{
+    background-color: #f7ff00;
+    color: #000000;
+}
+
+/************ Footer ************/
+
+footer{
+    text-align: center;
+}
+
+small{
+    color: #fffcff;
+}
+
+form{
+    color: #D49768;
+}
